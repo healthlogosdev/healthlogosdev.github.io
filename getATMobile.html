@@ -4,6 +4,8 @@
         <h1>Final step for Login with Amazon</h1>
         <p>Enjoy the ride.</p>
         <p>I'm hosted with GitHub Pages.</p>
+        <p id="msg"></p>
+        <p id="status"></p>
         <script type="text/javascript">
             //compose url
             // first get the state
@@ -17,6 +19,8 @@
             xhttp.onreadystatechange = function() { // Call a function when the state changes.
                 //console.log('Begin');
                 if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+                    document.getElementById("status").innerHTML = this.status;
+                    document.getElementById("msg").innerHTML = "Back from login";
                     // Request finished. Do processing here.
                     //console.log('Done');
                     console.log('Response', this);
