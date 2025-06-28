@@ -16,7 +16,7 @@ se <!DOCTYPE html>
             
             var redir = "https://api.amazon.com/auth/o2/token";
             var xhttp = new XMLHttpRequest();
-            xhttp.open("POST", redir);
+            xhttp.open("POST", redir, false);
             xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded;charset=UTF-8");
             xhttp.onreadystatechange = function() { // Call a function when the state changes.
                 //console.log('Begin');
@@ -42,7 +42,7 @@ se <!DOCTYPE html>
             //var strBody = "grant_type=authorization_code&code="+code+"&client_id=amzn1.application-oa2-client.b7a978f5efc248a098d2c0588dfb8392"+
             //"&client_secret=5b8009ce5a4b746d17f57965ce328a55c0847cfd75827101dff671b38fd8f9a9"+
             //"&redirect_uri=https://healthlogosdev.github.io/complete.html";              
-            xhttp.send(strBody);
+            //xhttp.send(strBody);
             
             var strBody = "grant_type=authorization_code&code="+code+"&client_id=amzn1.application-oa2-client.b7a978f5efc248a098d2c0588dfb8392"+
             "&client_secret=5b8009ce5a4b746d17f57965ce328a55c0847cfd75827101dff671b38fd8f9a9"
