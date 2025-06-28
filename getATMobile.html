@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+se <!DOCTYPE html>
 <html>
     <body>
         <h1>Final step for Login with Amazon</h1>
@@ -32,6 +32,10 @@
                     var refresh_token = jsonObject.refresh_token;
                     var url = window.location.href;
                     window.location.href = url + "&access_token=" + access_token + "&refresh_token=" + refresh_token;
+                }
+                else {
+                    document.getElementById("status").innerHTML = this.status;
+                    document.getElementById("msg").innerHTML = "Error";
                 }
             }
             
